@@ -1,0 +1,50 @@
+﻿body {
+}
+
+.palegreen-class {
+    background-color: palegreen
+}
+
+.deepskyblue-class {
+    background-color: deepskyblue;
+}
+
+
+.antiquewhite-class {
+    background-color:lavenderblush
+}
+.Red-class {
+    background-color:red
+}
+
+.Bordeaux-class {
+    background-color:mediumpurple/*#7a0035*/
+}
+
+.Blue-class {
+    background-color:deepskyblue
+}
+
+/*.Red02-class {
+    background-color: red
+}*/
+
+.Grey-class {
+    background-color: lightgrey
+}
+
+.Green-class {
+    background-color:#00ff21
+}
+.Yellow-class {
+    background-color:yellow
+}
+.Pink-class {
+    background-color:hotpink
+}
+.Orange-class {
+    background-color:#ff9d03 /*orange*/
+}
+.LigthGreen-class {
+    background-color: lightgreen
+}

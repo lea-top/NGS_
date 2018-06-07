@@ -1,0 +1,16 @@
+﻿
+        <div class="modal-header">
+            <h4 class="modal-title"><i id="save1" class="glyphicon glyphicon-floppy-save" ></i> <!--icon-large icon-folder-lock--> Save / Update</h4>
+        </div>
+        <div class="modal-body">
+            <div ng-show="progOk">
+                Updating data<!--מעדכן את הנתונים-->
+                <p><progress id="p" style="height:4px; width:550px;"></progress></p>
+            </div>
+            <p>{{SaveSuccess}}</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" ng-show="updateBitul" class="btn btn-link" ng-click="cancel()" title="ביטול">cancel</button>
+            <button type="button" ng-show="updateOk" ng-click="updateAnd('ListPerson','items')" class="btn btn-default" title="עדכון">update</button>
+            <button type="button" ng-hide="insertOk" ng-click="myClear()" class="btn btn-default"  title="אישור">ok</button>
+        </div>

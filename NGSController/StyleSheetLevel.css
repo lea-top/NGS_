@@ -1,0 +1,11 @@
+﻿.pic-Level {
+    color: black; /*mediumvioletredwhite*/
+    background: lightgrey; /*#0e0860 #b8a0c1*/
+    padding-bottom: 5px;
+    text-align: center;
+}
+tooltip {
+    max-width: 350px;
+    /* If max-width does not work, try using width instead */
+    width: 350px;
+}

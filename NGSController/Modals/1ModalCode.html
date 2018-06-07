@@ -1,0 +1,37 @@
+﻿
+<form name="myForm">
+    <div class="modal-header ">
+        <button type="button" class="close" ng-click="cancel()">&times;</button>
+        <h4 class="modal-title"><span class="glyphicon glyphicon-barcode"></span>  Barcode scanning</h4>
+    </div>
+    <div class="modal-body ">
+        <p>Scan Cantrige barcode </p>
+        <input type="text" class="form-control" ng-model="BarcodeCantrige" placeholder="Enter Cantrige Barcode" focus-me="shouldBeOpen" required><br /> 
+
+        <p ng-show="BarcodeCantrige!=null">Scan barcode of </p>
+        <p ng-show="BarcodeCantrige!=null">Plate 1 </p>
+        <input ng-show="BarcodeCantrige!=null" type="text" maxlength="13" class="form-control" ng-model="BarcodeP1" placeholder="enter barcode" focus-me="shouldBeOpen" required><br />
+        <p ng-show="BarcodeP1!=null">Plate 2</p>
+        <input type="text" ng-show="BarcodeP1!=null" maxlength="13" class="form-control" ng-model="BarcodeP2" placeholder="enter barcode" focus-me="shouldBeOpen" required><br />
+        <p ng-show="BarcodeP2!=null">Plate 3</p>
+        <input type="text" ng-show="BarcodeP2!=null" maxlength="13" class="form-control" ng-model="BarcodeP3" placeholder="enter barcode" focus-me="shouldBeOpen" required><br />
+        <p ng-show="BarcodeP3!=null">Plate 4</p>
+        <input type="text" ng-show="BarcodeP3!=null" maxlength="13" class="form-control" ng-model="BarcodeP4" placeholder="enter barcode" focus-me="shouldBeOpen" required><br />
+    </div>
+    <div class="modal-body  ">
+        <p ng-show="BarcodeCantrige!=null" >Runs : {{Run}}</p>
+        <p ng-show="BarcodeCantrige!=null">Barcode Cantrige : {{BarcodeCantrige}}</p>
+        <p ng-show="BarcodeP1!=null">Plate 1 : {{BarcodeP1}}</p>
+        <p ng-show="BarcodeP2!=null">Plate 2 : {{BarcodeP2}}</p>
+        <p ng-show="BarcodeP3!=null">Plate 3 : {{BarcodeP3}}</p>
+        <p ng-show="BarcodeP4!=null">Plate 4 : {{BarcodeP4}}</p>
+        <button type="submit" class="btn btn-default"   ng-click="ifRunsWithBarcode()" title="אישור"> ok</button>
+
+    </div>
+    <div class="modal-footer">
+      
+        <a href="" class="btn btn-link" ng-click="printModal('ModalCencel')" title="ביטול">cancel</a>
+        <button type="submit" ng-click="saveDownloadLevel0AndClose('SaveLevel0')" class="btn btn-default" autofocus="autofocus" title="המשך" ng-if="Run!=null"  >Continue</button><!--ifBarcode('1ModalFile')-->
+    </div>
+</form>
+

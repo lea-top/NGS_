@@ -1,0 +1,116 @@
+﻿
+body {
+}
+/*@media screen and (max-width: 300px) {
+    tbody {
+        height: 580px;
+        overflow-y: auto;
+        overflow-x: auto;
+        width: 100%;
+        width: 300px;
+        white-space: nowrap;
+        display: block;
+        float: none;
+    }
+}*/
+/*table {
+    height: auto;
+    max-height: 600px;
+    overflow-y: auto;
+    overflow-x: auto;
+    width: inherit;
+    max-width: 100%;
+    white-space: nowrap;
+}*/
+tbody {
+    height: auto;
+    /*height: 580px;*/
+    max-height: 600px;
+    overflow-y: auto;
+    /*overflow-x:scroll;
+    width: inherit;
+    max-width: 100%;*/
+    white-space: nowrap;
+}
+/*thead {
+    height: auto;
+    /*height: 580px;*/
+/*max-height: 600px;
+    overflow-y: auto;
+    overflow-x: auto;
+    width: inherit;
+    max-width: 100%;
+    white-space: nowrap;
+}*/
+tbody, thead {
+    text-align: center;
+    /*white-space: nowrap;
+    word-wrap: break-word;*/
+}
+
+thead, tbody, tr {
+    display: block;
+}
+
+th {
+    display: inline-block;
+    width: 50px; /*2%;*/
+    /*min-width: 4%;*/
+    max-width: 50px; /*6%;*/
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 50px;
+    white-space: nowrap;
+    /*word-break:break-word;*/
+}
+
+td.scrollTd {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+td {
+    padding-right: 20px;
+    text-align: left;
+    display: inline-block;
+    width: 50px; /*2%;*/
+    max-width: 50px; /*6%;*/
+    height: 50px;
+}
+
+th::-webkit-scrollbar {
+    /*width: 7px;*/
+    height: 7px;
+    border-radius: 20px;
+}
+
+th::-webkit-scrollbar-track {
+    background: #ddd; /*#7f7f84#CCEEF4;*/
+    border-radius: 20px;
+}
+
+th::-webkit-scrollbar-thumb {
+    /*width: 5px;*/
+    height: 5px;
+    background: #c7c4c4; /* #7f7f84#0026ff#49AEC0;*/
+    border: 2px solid #ddd;
+    /*#CCEEF4;*/
+    border-radius: 15px;
+}
+
+td::-webkit-scrollbar {
+    height: 7px;
+    border-radius: 20px;
+}
+
+td::-webkit-scrollbar-track {
+    background: #ddd;
+    border-radius: 20px;
+}
+
+td::-webkit-scrollbar-thumb {
+    height: 5px;
+    background: #c7c4c4;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+}

@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body id="uploadFile" ng-app="app" ng-controller="ctrl" ng-strict-di>
+    <ul class="nav nav-tabs">
+        <!---->
+        <li class="active"><a href="#file1">File1</a></li>
+        <li class="dropdown">
+            <a href="#">
+                Menu 1
+                <span class="caret"></span>
+            </a>
+        </li>
+        <li><div ui-sref="Level2"><a href="#!Level2">Page 2</a></div></li><!--<a href="#file2" aria-controls="file2" role="tab" data-toggle="tab">Menu 2</a>-->
+        <li><a href="#file3" aria-controls="file3" role="tab" data-toggle="tab">Menu 3</a></li>
+    </ul>
+    <div data-ui-view="">חעעחלי</div>
+    <div id="file3" ng-include="'Levels/Level1.html'">nnnn</div>
+    <div id="file2">
+        <table cellspacing="0" cellpadding="0" class="scrollTable table table-condensed table-hover">
+            <thead class="fixedHeader" position=fixed>
+                <tr>
+                    <th><a ng-click="sort('Chrom')">Chrom</a> <span id="Chrom"></span></th>
+                    <th><a ng-click="sort('Start')">Start</a> <span id="Start"></span></th>
+                    <th><a ng-click="sort('End')">End</a> <span id="End"></span></th>
+                    <th><a ng-click="sort('Id')">Id</a> <span id="Id"></span></th>
+                    <th><a ng-click="sort('Ref')">Ref</a> <span id="Ref"></span></th>
+                    <th><a ng-click="sort('Alt')">Alt</a> <span id="Alt"></span></th>
+                    <th><a ng-click="sort('DyName')">DyName</a> <span id="DyName"></span></th>
+                    <th><a ng-click="sort('GenotypeChrom')">GenotypeChrom</a> <span id="GenotypeChrom"></span></th>
+                    <th><a ng-click="sort('GenotypePos')">GenotypePos</a> <span id="GenotypePos"></span></th>
+                    <th><a ng-click="sort('GenotypeId')">GenotypeId</a> <span id="GenotypeId"></span></th>
+                    <th><a ng-click="sort('GenotypeRef')">GenotypeRef</a> <span id="GenotypeRef"></span></th>
+                    <th><a ng-click="sort('GenotypeAlt')">GenotypeAlt</a> <span id="GenotypeAlt"></span></th>
+                    <th ng-repeat-start="item in items2  track by $index" ng-if="item.ListPerson[$index]!=null">
+                        <a ng-click="sort('Genotype')"> Genotype {{item.ListPerson[$index].Name}}</a>
+                    </th>
+                    <!--<th><a ng-click="sort('SMN1_8_SNP')" ng-repeat="i in items2.ListPerson"> {{i.Name}} allele</a></th>track by-->
+                    <th ng-if="item.ListPerson[$index]!=null"><a ng-click="sort('allele')">{{item.ListPerson[$index].Name}} allele</a><span id="allele"></span></th>
+                    <th ng-repeat-end ng-if="item.ListPerson[$index]!=null"><a ng-click="sort('total')">{{item.ListPerson[$index].Name}} total </a><span id="total"></span></th>
+                </tr>
+            </thead>
+            <tbody id="tableForLevel3" class="scrollContent" position=fixed>
+
+                <tr ng-repeat="item in items2 ">
+                    <th class="scrollTd">{{item.Chrom}}</th>
+                    <th class="scrollTd">{{item.Start}}</th>
+                    <th class="scrollTd">{{item.End}}</th>
+                    <th class="scrollTd">{{item.Id}}</th>
+                    <th class="scrollTd">{{item.Ref}}</th>
+                    <th class="scrollTd">{{item.Alt}}</th>
+                    <th class="scrollTd">{{item.DyName}}</th>
+                    <th class="scrollTd">{{item.GenotypeChrom}}</th>
+                    <th class="scrollTd">{{item.GenotypePos}}</th>
+                    <th class="scrollTd">{{item.GenotypeId}}</th>
+                    <th class="scrollTd">{{item.GenotypeRef}}</th>
+                    <th class="scrollTd">{{item.GenotypeAlt}}</th>
+                    <td class="scrollTd" ng-class="getCSSClass(i.Color.Genotype)" ng-repeat-start="i in item.ListPerson ">{{i.Genotype}} </td>
+                    <td ng-class="getCSSClass(i.Color.AlleleCoverage)">{{i.AlleleCoverage}}</td>
+                    <td ng-class="getCSSClass(i.Color.TotalCoverage)" ng-repeat-end> {{i.TotalCoverage}}   </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="js/angular/angular.js"></script>
+    <script src="js/angular/angular.min.js"></script>
+    <script src="js/angular/angular-route.js"></script>
+
+    <script src="js/angular/angular-route.min.js"></script>
+    <link href="js/angular/bootstrap.css" rel="stylesheet" />
+    <script src="js/angular/ui-bootstrap-tpls-2.5.0.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/ctrl.js"></script>
+    <link href="StyleSheetColorTd.css" rel="stylesheet" />
+    <link href="StyleSheetTable.css" rel="stylesheet" />
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NGSData", "NGSData\NGSData.csproj", "{9C04A176-7051-4394-9FA9-AA75AB7750D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NGSService", "NGSService\NGSService.csproj", "{893B0236-47FA-4E5B-9505-2A223A60C7E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NGSController", "NGSController\NGSController.csproj", "{4BF50A25-B1DD-4114-B369-24D11FFA164A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C04A176-7051-4394-9FA9-AA75AB7750D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C04A176-7051-4394-9FA9-AA75AB7750D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C04A176-7051-4394-9FA9-AA75AB7750D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C04A176-7051-4394-9FA9-AA75AB7750D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{893B0236-47FA-4E5B-9505-2A223A60C7E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{893B0236-47FA-4E5B-9505-2A223A60C7E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{893B0236-47FA-4E5B-9505-2A223A60C7E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{893B0236-47FA-4E5B-9505-2A223A60C7E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BF50A25-B1DD-4114-B369-24D11FFA164A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BF50A25-B1DD-4114-B369-24D11FFA164A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BF50A25-B1DD-4114-B369-24D11FFA164A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BF50A25-B1DD-4114-B369-24D11FFA164A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A60EB051-6B43-4FD6-BA1C-C91E49E1F279}
+	EndGlobalSection
+EndGlobal

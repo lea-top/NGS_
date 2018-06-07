@@ -1,0 +1,124 @@
+
+use NGSData
+go
+
+--create table NumberingRuns
+--(
+-- IdNumberingRuns int IDENTITY(1,1),
+-- IdCantrige  varchar (20),
+-- PRIMARY KEY(IdNumberingRuns) 
+--)
+--drop table ListPersonForLevel2 
+--create table Level0
+--(
+-- IdRun varchar(250),
+-- IdLevel0 int IDENTITY(1,1),
+-- IdPlate varchar (20),
+-- [NumPlate]  varchar(250),
+-- [SampleName]  varchar(250),
+-- [Pos]   varchar(250),
+-- Id    varchar(250),                 
+-- [Or260280]   varchar(250),                
+-- [Comments]  varchar(250),
+-- [Type1] varchar(250),
+-- [IdPos] varchar(250),
+-- [NgUl] varchar(250),
+-- [Vol]  varchar(250),
+-- PRIMARY KEY([SampleName],IdPlate) 
+--)
+--create table Level2
+--(
+-- IdMutation int IDENTITY(1,1),
+-- IdFile varchar (20),
+-- Chrom  varchar(250),
+-- Start1  varchar(250),
+-- End1   varchar(250),
+-- Id    varchar(250),                 
+-- Ref   varchar(250),                
+-- Alt  varchar(250),
+-- DyName varchar(250),
+-- DyDis varchar(250),
+-- DyMut varchar(250),
+-- MutID varchar(250),
+-- GenotypeChrom  varchar(250),
+-- GenotypePos  varchar(250),
+-- GenotypeId  varchar(250),
+-- GenotypeRef  varchar(250),
+-- GenotypeAlt   varchar(250) , 
+-- ColorDyName varchar(250) , 
+-- PRIMARY KEY(Start1,Chrom,End1,IdFile) 
+--)
+--IdMutation (Start1,DyName,Id,IdFile) FOREIGN KEY REFERENCES ListPersonForLevel2(IdMutation,NameP)
+--go
+--create table ListPersonForLevel2
+--(
+-- IdMutation  varchar(250) ,
+-- NameP  varchar(250) ,
+-- Genotype   varchar(250),
+-- AlleleCoverage    varchar(250),                 
+-- TotalCoverage   varchar(250),                
+-- GenotypeColor  varchar(250),
+-- AlleleCoverageColor varchar(250),
+-- TotalCoverageColor  varchar(250),
+-- primary key(IdMutation,NameP) 
+ 
+-- )
+--)
+--go
+--drop table ListPersonForLevel1
+--create table MovedLevel
+--(
+-- IdMoveLevel int IDENTITY(1,1),
+-- IdGroup varchar(250) PRIMARY KEY,
+-- Level1  varchar(250) ,
+-- Level2  varchar(250) ,
+-- Level3   varchar(250),
+-- Level4   varchar(250),                 
+-- Level5   varchar(250),                
+-- SendOffice  varchar(250),
+--)
+--go
+--drop table GroupPlates
+--create table GroupPlates
+--(
+-- IdGroup int IDENTITY(1,1) PRIMARY KEY,
+-- IdPlate1  varchar(250) ,
+-- IdPlate2  varchar(250) ,
+-- IdPlate3   varchar(250),
+-- IdPlate4   varchar(250),                 
+--)
+--go
+
+--delete from Level2 
+--delete from [dbo].[ListPersonForLevel2]
+--delete from [dbo].[MovedLevel]
+--delete from [dbo].[Level0]
+
+--select * from [dbo].[MovedLevel]
+--select * from [dbo].[Level0]
+--where [NgUl]<=5
+--Level2 
+--go
+--select * from [dbo].[ListPersonForLevel2]
+--order by IdMutation
+--go
+
+--select * from [dbo].[NumberingRuns]
+--from Level2 
+--join  [dbo].[ListPersonForLevel2] ON [dbo].[ListPersonForLevel2].IdMutation=Level2.IdMutation
+--order by [dbo].[ListPersonForLevel2].IdMutation
+--go
+
+
+----------------------------------------
+--drop table t4
+--CREATE TABLE t4( c1 int, c2 int,primary key( c1,c2)) 
+--select * from  [dbo].[t4]
+--insert into [dbo].[t4]([c1],[c2])
+--values(3,2)
+----------------------------------------
+-- Level2 
+--drop table NumberingRuns 
+--go
+--drop table Level0 
+--go

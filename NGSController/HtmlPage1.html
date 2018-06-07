@@ -1,0 +1,298 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>NGS</title>
+
+    <link href="js/angular/bootstrap.css" rel="stylesheet" />
+    <link href="js/angular/bootstrap.icon-large.min.css" rel="stylesheet" />
+    <script src="js/angular/jquery-1.11.3.min.js"></script>
+    <script src="js/angular/bootstrap.min.js"></script>
+    <link href="js/angular/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="js/angular/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body ng-app="app" ng-controller="ctrl" id="uploadFile" ng-strict-di>
+    <div class="sha ">
+        <div class="container">
+            <br />
+            <div style="text-align:center"><img class="sizeImg" src="img/1111.png" /><br /><br /></div>
+        </div>
+    </div><div style="background:black; color:white; padding:5px">
+        <h4 style="text-align:center">NGS</h4>
+    </div>
+
+    <section class="section how-it-works" id="how-it-works" ng-cloak>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 board">
+                    <div class="board-inner">
+                        <ul class="nav nav-tabs" id="myTab">
+                            <div class="liner"> </div>
+                            <li class="active">
+                                <a href="#Level1" aria-controls="Level1" role="tab" data-toggle="tab" title="Level 1">
+                                    <span class="round-tabs one">
+                                        <i class="icon icon-Level2-male">1</i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#Level2" aria-controls="Level2" role="tab" data-toggle="tab" title="Level 2">
+                                    <!--href="#!Level2"-->
+                                    <span class="round-tabs two">
+                                        <i class="icon icon-pencil">2</i>
+                                    </span>
+                                </a>
+                            </li>
+                            <!--<li>
+                                <a href="#Level3" aria-controls="Level3" role="tab" data-toggle="tab" title="Level 3">
+                                    <span class="round-tabs three">
+                                        <i class="icon icon-layers">3</i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#Level4" aria-controls="Level4" role="tab" data-toggle="tab" title="Level 4">
+                                    <span class="round-tabs four">
+                                        <i class="icon icon-aperture">4</i>
+                                    </span>
+                                </a>
+                            </li>-->
+                            <li>
+                                <a href="#doner" aria-controls="doner" role="tab" data-toggle="tab" title="search">
+                                    <span class="round-tabs five">
+                                        <i class="glyphicon glyphicon-search"></i>
+                                        <!--<i class="icon-large icon-search"></i>-->
+                                        <!--<i class="icon icon-tools-2"></i>-->
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="Level1">
+                            <h3 class="head text-center" style="text-align:center; color:darkblue">Sample import</h3>
+                            <p class="narrow text-center">
+                                Please select Plate to create the file txt.
+                            </p>
+                            <p class="text-center">
+                                <a href="" class="btn btn-primary btn-outline-rounded green" ng-click="printDivModal('1ModalCode')"> Select <span style="margin-left:8px; margin-top:2px;" class="icon-large icon-file-import"></span></a>
+                            </p>
+                        </div>
+                        <div class="tab-pane fade" id="Level2">
+                            <h3 class="head text-center" style="text-align:center; color:darkblue">Sample import</h3>
+                            <!--<hr  style=" width:2%; height:2%; " />-->
+                            <p ng-hide="table" class="narrow text-center">
+                                Please select Plate to create the file.
+                            </p>
+                            <p class="text-center">
+                                <a href="#!Level2" ng-click="printDivModal('2ModalCode')" class="btn btn-primary btn-outline-rounded green"> Select <span style="margin-left:8px; margin-top:2px;" class="icon-large icon-file-import"></span></a><!--class="glyphicon glyphicon-import"data-toggle="modal" data-target="#myModal"-->
+                            </p>
+
+
+
+                            <section class="pic-Level">
+                                <div id="page-wrapper">
+                                    <div class="row">
+                                        <div class=" col-lg-12">
+                                            <!-- <h3>  </h3>Step 2-->
+                                            <h4>name file:  {{NameFile}}  </h4>
+                                            <h4>num of Run:  {{ Production.RunPlates.NumRun}}  </h4>
+                                            <h4>Barcode  Cantrige:  {{ Production.RunPlates.BarcodeCantrige}}  </h4>
+                                            <h4>Barcode  plate 1 :  {{ Production.RunPlates.BarcodeP1 }}  </h4>
+                                            <h4>Barcode  plate 2:  {{ Production.RunPlates.BarcodeP2 }}  </h4>
+                                            <h4>Barcode  plate 3:  {{ Production.RunPlates.BarcodeP3 }}  </h4>
+                                            <h4>Barcode  plate 4:  {{ Production.RunPlates.BarcodeP4 }}  </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <ul class="nav nav-tabs ">
+                                <li class="active">
+                                    <a href="#!Level1" data-toggle="tab">
+                                        Genotype Results
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!Level2" data-toggle="tab">
+                                        self-chained
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!Level3" data-toggle="tab">
+                                        insertions_results
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!Level4" data-toggle="tab">
+                                        Hap_insertions_results
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!MpileupInsertions" data-toggle="tab">
+                                        mpileup_insertions_results
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!Level5" data-toggle="tab">
+                                        deletion
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!Level6" data-toggle="tab">
+                                        Summary
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!Level7" data-toggle="tab">
+                                        SummaryGraph
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!Level8" data-toggle="tab">
+                                        Concentration
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!Level9" data-toggle="tab">
+                                        Final
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--<div class="tab-pane fade" id="Level3">
+                            <h3 class="head text-center" style="text-align:center; color:darkblue">Sample import</h3>
+                            <p class="narrow text-center">
+                                Please select Plate to create the file median.
+
+                            </p>
+                            <p class="text-center">
+                                <a href="" class="btn btn-primary btn-outline-rounded green" ng-click="printDivModal('3ModalCode')"> Select <span style="margin-left:8px; margin-top:2px;" class="icon-large icon-file-import"></span></a>
+                            </p>
+                        </div>
+                        <div class="tab-pane fade" id="Level4">
+                            <h3 class="head text-center" style="text-align:center; color:darkblue">Sample import</h3>
+                            <p class="narrow text-center">
+                                Please select Plate to create the file for reference.
+                            </p>
+                            <p class="text-center">
+                                <a href="" class="btn btn-primary btn-outline-rounded green" ng-click="printDivModal('4ModalCode')"> Select <span style="margin-left:8px; margin-top:2px;" class="icon-large icon-file-import"></span><span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
+                            </p>
+                        </div>-->
+                        <div class="tab-pane fade" id="Level5">
+                            <h3 class="head text-center" style="text-align:center; color:darkblue">Sample import</h3>
+                            <p class="narrow text-center">
+                                Please select Plate to create the file for reference.
+                            </p>
+                            <p class="text-center">
+                                <a href="" class="btn btn-primary btn-outline-rounded green" ng-click="printDivModal('4ModalCode')"> Select <span style="margin-left:8px; margin-top:2px;" class="icon-large icon-file-import"></span><!--<span style="margin-left:10px;" class="glyphicon glyphicon-send"></span>--></a>
+                            </p>
+                        </div><div class="tab-pane fade" id="Level6">
+                            <h3 class="head text-center" style="text-align:center; color:darkblue">Sample import</h3>
+                            <p class="narrow text-center">
+                                Please select Plate to create the file for reference.
+                            </p>
+                            <p class="text-center">
+                                <a href="" class="btn btn-primary btn-outline-rounded green" ng-click="printDivModal('4ModalCode')"> Select <span style="margin-left:8px; margin-top:2px;" class="icon-large icon-file-import"></span><!--<span style="margin-left:10px;" class="glyphicon glyphicon-send"></span>--></a>
+                            </p>
+                        </div>
+                        <div class="tab-pane fade" id="doner">
+                            <div class="text-center">
+                                <i class="img-intro icon-checkmark-circle"></i>
+                            </div>
+                            <h3 class="head text-center" style="text-align:center; color:darkblue">Mangment</h3>
+                            <p class="narrow text-center">
+                                Search for samples.
+                            </p>
+                            <div class="panel panel-heading">
+                                <p class="narrow text-center" style="font-size:larger;">
+                                    Search To download file of final step 4.
+                                </p>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-11">
+                                            <div class="input-group" id="adv-search">
+                                                <input type="text" ng-model="SearchFileInput" maxlength="20" class="form-control" placeholder="Search By Number Plate" />
+                                                <div class="input-group-btn">
+                                                    <div class="btn-group" role="group">
+                                                        <button type="button" class="btn btn-primary" ng-click="SearchFileXlsx()"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-11">
+                                            <div class="input-group" id="adv-search">
+                                                <input type="number" min="1" ng-model="numShipping" class="form-control" placeholder="Search By Shipping Number" />
+                                                <div class="input-group-btn">
+                                                    <div class="btn-group" role="group">
+                                                        <button type="button" class="btn btn-primary" ng-click="SearchFileXlsx()"><span class="glyphicon glyphicon-search" aria-hidden="true" required></span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <br />
+                                </div>
+                            </div>
+                            <div class="panel panel-body">
+                                <p class="narrow text-center" style="font-size:larger;">
+                                    Search for view in step 4.
+                                </p>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-11">
+                                            <div class="input-group" id="adv-search">
+                                                <input type="text" ng-model="SearchSampleName" maxlength="20" class="form-control" placeholder="Search By sample Name." />
+                                                <div class="input-group-btn">
+                                                    <div class="btn-group" role="group">
+                                                        <button type="button" class="btn btn-primary" ng-click="SearchSampleNameS4('Level5')"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                            </div>
+                            <!--<p class="text-center">
+                                <a href="" class="btn btn-primary btn-outline-rounded green"> Get Quote <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
+                            </p>-->
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!--<a href="#!Level4">4</a>-->
+    <!--<a href="#!Level2">Level2</a>
+    <a href="#!Level1">Level1</a>-->
+    <ng-view ng-cloak></ng-view>
+
+    <script src="js/angular/angular.js"></script>
+
+    <!--<script src="js/angular/angular.min.js"></script>-->
+    <script src="js/angular/angular-route.js"></script>
+
+    <script src="js/angular/angular-route.min.js"></script>
+    <link href="js/angular/bootstrap.css" rel="stylesheet" />
+    <script src="js/angular/ui-bootstrap-tpls-2.5.0.min.js"></script>
+
+    <link href="StyleSheetColorTd.css" rel="stylesheet" />
+    <link href="StyleSheetTable.css" rel="stylesheet" />
+    <!--<link href="StyleSheetMenu.css" rel="stylesheet" />-->
+    <link href="StyleSheetTab.css" rel="stylesheet" />
+    <link href="StyleSheetLevel.css" rel="stylesheet" />
+    <script src="js/app.js"></script>
+    <script src="js/ctrl.js"></script>
+    <script src="js/ctrlLevels.js"></script>
+    <script src="js/ctrlModals.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+﻿<div>
+    <a ng-show="showAgain" ng-click="showAgainF()">Re-display the previous form</a>
+    <div ng-hide="table" id="myTable">
+
+        <div class="tab-content">
+            <div class="tab-pane fade in active" id="file1">
+                <section class="section pic-table" id="pic-table">
+                    <br />
+                    <div class="col-lg-2">
+                        <form>
+                            <div class="form-group" ng-show="search">
+                                <div class="icon-addon addon-lg">
+                                    <input type="text" class="form-control" maxlength="100" placeholder="Search .." id="email" ng-model="SearchQuery">
+                                    <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="search"></label>
+                                </div>
+                            </div>
+                        </form>
+                    </div><br />
+                    <!--<hr />-->
+                    <div>
+                        <div class="col-lg-12">
+                            <button type="button" ng-click="search=!search" class="btn btn-default dropdown-toggle glly" style="width:4%;" title="search"><i class="glyphicon glyphicon-search"></i>  </button>
+                        </div><br /><br /><br />
+                        <div class="container-fluid">
+                            {{MassegeSamplesNotInStep1}}
+                            <div class="panel panel-default">
+
+                                <div class="panel-body" ng-cloak>
+                                    <table cellspacing="0" cellpadding="0" class="scrollTable table table-condensed table-hover">
+                                        <thead class="fixedHeader" position=fixed>
+                                            <tr>
+                                                <th>Id </th>
+                                                <th>IdPlate </th>
+                                                <th>NumPlate</th>
+                                                <th>SampleName</th>
+                                                <th>Pos</th>
+                                                <th>Or260280</th>
+                                                <th>NgUl</th>
+                                                <th>Type</th>
+                                                <th>IdPos</th>
+                                                <th>Vol</th>
+                                                <th>Comments</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tableForLevel3" class="scrollContent" position=fixed>
+                                            <tr ng-repeat="item in items8 | filter:SearchQuery ">
+                                                <td class="scrollTd">{{$index}}</td>
+                                                <td class="scrollTd">{{item.Id}}</td>
+                                                <td class="scrollTd">{{item.IdPlate}}</td>
+                                                <td class="scrollTd">{{item.NumPlate}}</td>
+                                                <th class="scrollTd">{{item.SampleName}}</th>
+                                                <td class="scrollTd">{{item.Pos}}</td>
+                                                <td class="scrollTd">{{item.Or260280}}</td>
+                                                <td class="scrollTd">{{item.NgUl}}</td>
+                                                <td class="scrollTd">{{item.Type}}</td>
+                                                <td class="scrollTd">{{item.IdPos}}</td>
+                                                <td class="scrollTd">{{item.Vol}}</td>
+                                                <td class="scrollTd">{{item.Comments}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>

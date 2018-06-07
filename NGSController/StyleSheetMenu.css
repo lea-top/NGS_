@@ -1,0 +1,725 @@
+﻿body {
+}
+.how-it-works {
+    background: #f5f5fa;
+    border-top: 2px solid #ddd;
+}
+/*.sha {
+    box-shadow: 0 0 25px 0 inset;
+}*/
+/*.board {
+   
+
+}*/
+.board .nav-tabs {
+    position: relative;
+    /* border-bottom: 0; */
+    /* width: 80%; */
+    margin: 40px auto;
+    margin-bottom: 0;
+    box-sizing: border-box;
+}
+
+.wait {
+    cursor: wait;
+}
+
+.board > div.board-inner > .nav-tabs {
+    border: none;
+}
+
+p.narrow {
+    width: 60%;
+    margin: 10px auto;
+}
+
+.liner {
+    height: 2px;
+    background: #ddd;
+    position: absolute;
+    width: 80%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    z-index: 1;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    color: #ec3e97;
+    cursor: default;
+    /* background-color: #ffffff; */
+    border: 0;
+    border-bottom-color: transparent;
+    outline: 0;
+}
+
+span.round-tabs {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    display: inline-block;
+    border-radius: 100px;
+    background: white;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    font-size: 25px;
+}
+
+.glly {
+    font-size: 20px;
+}
+
+span.round-tabs.one {
+    border: 2px solid #ddd;
+    color: #ddd;
+}
+
+li.active span.round-tabs.one, li.active span.round-tabs.two, li.active span.round-tabs.three, li.active span.round-tabs.four, li.active span.round-tabs.five {
+    background: #222 !important; /*   66b4a0   #5d31f5#69cb95*#12c/
+    border: 2px solid #12c; /*#69cb95;*/
+    color: #fff;
+}
+
+span.round-tabs.two {
+    border: 2px solid #ddd;
+    color: #ddd;
+}
+
+span.round-tabs.three {
+    border: 2px solid #ddd;
+    color: #ddd;
+}
+
+span.round-tabs.four {
+    border: 2px solid #ddd;
+    color: #ddd;
+}
+
+span.round-tabs.five {
+    border: 2px solid #ddd;
+    color: #ddd;
+}
+
+.nav-tabs > li.active > a span.round-tabs {
+    background: #fafafa;
+}
+
+.nav-tabs > li {
+    width: 20%;
+}
+
+    .nav-tabs > li a {
+        width: 70px;
+        height: 70px;
+        margin: 20px auto;
+        border-radius: 100%;
+        padding: 0;
+    }
+
+        .nav-tabs > li a:hover {
+            background: transparent;
+        }
+
+.tab-pane {
+    position: relative;
+    padding-top: 50px;
+}
+
+.btn-outline-rounded {
+    padding: 10px 40px;
+    margin: 20px 0;
+    border: 2px solid transparent;
+    border-radius: 25px;
+}
+
+.btn.green {
+    background-color: darkgray; /*darkblue#222#69cb95;*/
+    /*border: 2px solid darkgray;*/ /*#12c #5cb85c #69cb95:ירוק*/
+    color: black; /*#ffffff*/
+}
+
+@media( max-width : 585px ) {
+    .sizeImg {
+        width: 200px;
+        height: 50px;
+    }
+
+    .board {
+        width: 90%;
+        height: auto !important;
+    }
+
+    span.round-tabs {
+        font-size: 16px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .tab-content .head {
+        font-size: 20px;
+    }
+
+    .nav-tabs > li a {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    li.active:after {
+        content: " ";
+        position: absolute;
+        left: 35%;
+    }
+
+    .btn-outline-rounded {
+        padding: 12px 20px;
+    }
+
+    .glyphicon {
+        width: 5px;
+        height: 5px;
+    }
+}
+
+.pic-Level {
+    color: black; /*mediumvioletredwhite*/
+    background: lightgrey; /*#0e0860 #b8a0c1*/
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.pic-down {
+    color: white;
+    background: #222; /*black#f5f5fa*/
+    padding-bottom: 3px;
+}
+
+.pic-table {
+    /*color: mintcream ghostwhite*/ /*color: papayawhip white;#f5f5fa*/
+    background: #f5f5fa; /*#faf9f6;*/
+    padding-bottom: 30px;
+}
+
+.pic-admin {
+    /*color: mintcream ghostwhite*/ /*color: papayawhip white;#f5f5fa*/
+    background: #f5f5fa; /*#faf9f6;*/
+    padding-bottom: 100px;
+}
+
+.logo {
+    text-align: center;
+    /*font-family: 'Varela Round';*/
+    /*padding:5px 0;*/
+    font-size: 50px;
+    /*color: #b733eb; /*black#aaaaaa*/
+    /*font-weight: bold;*/
+}
+
+.page-alerts .page-alert {
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.notice {
+    padding: 15px;
+    background-color: #fafafa;
+    border-left: 6px solid #7f7f84;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+    box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+}
+
+.notice-sm {
+    padding: 10px;
+    font-size: 80%;
+}
+
+.notice-lg {
+    padding: 35px;
+    font-size: large;
+}
+
+.notice-success {
+    border-color: #80D651;
+}
+
+    .notice-success > strong {
+        color: #80D651;
+    }
+
+.notice-warning {
+    border-color: #FEAF20;
+}
+
+    .notice-warning > strong {
+        color: #FEAF20;
+    }
+.btn-group .btn {
+    border-radius: 0;
+    margin-left: -1px;
+}
+
+    .btn-group .btn:last-child {
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+
+.btn-group .form-horizontal .btn[type="submit"] {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.form-horizontal .form-group {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.form-group .form-control:last-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+    #adv-search {
+        width: 500px;
+        margin: 0 auto;
+    }
+
+    .dropdown.dropdown-lg {
+        position: static !important;
+    }
+
+        .dropdown.dropdown-lg .dropdown-menu {
+            min-width: 500px;
+        }
+}
+
+.btn.btn-default {
+    width: 18%;
+}
+
+.modal-lg {
+    /*width: 1600px;*/
+    width: 100%;
+    /*max-width: 2000px;*/
+    /*//  height: 1220px;*/
+}
+
+.center-block {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input-group .icon-addon .form-control {
+    border-radius: 0;
+}
+
+.icon-addon {
+    position: relative;
+    color: #555;
+    display: block;
+}
+
+    .icon-addon:after,
+    .icon-addon:before {
+        display: table;
+        content: " ";
+    }
+
+    .icon-addon:after {
+        clear: both;
+    }
+
+    .icon-addon.addon-md .glyphicon,
+    .icon-addon .glyphicon,
+    .icon-addon.addon-md .fa,
+    .icon-addon .fa {
+        position: absolute;
+        z-index: 2;
+        left: 10px;
+        font-size: 14px;
+        width: 20px;
+        margin-left: -2.5px;
+        text-align: center;
+        padding: 10px 0;
+        top: 1px
+    }
+
+    .icon-addon.addon-lg .form-control {
+        line-height: 1.33;
+        height: 46px;
+        font-size: 18px;
+        padding: 10px 16px 10px 40px;
+    }
+
+    .icon-addon.addon-sm .form-control {
+        height: 30px;
+        padding: 5px 10px 5px 28px;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .icon-addon.addon-lg .fa,
+    .icon-addon.addon-lg .glyphicon {
+        font-size: 18px;
+        margin-left: 0;
+        left: 11px;
+        top: 4px;
+    }
+
+    .icon-addon.addon-md .form-control,
+    .icon-addon .form-control {
+        padding-left: 30px;
+        float: left;
+        font-weight: normal;
+    }
+
+    .icon-addon.addon-sm .fa,
+    .icon-addon.addon-sm .glyphicon {
+        margin-left: 0;
+        font-size: 12px;
+        left: 5px;
+        top: -1px
+    }
+
+    .icon-addon .form-control:focus + .glyphicon,
+    .icon-addon:hover .glyphicon,
+    .icon-addon .form-control:focus + .fa,
+    .icon-addon:hover .fa {
+        color: #2580db;
+    }
+
+
+
+
+.sortorder:after {
+    content: '\25b2';
+    /*// BLACK UP-POINTING TRIANGLE*/
+}
+
+.sortorder.reverse:after {
+    content: '\25bc';
+    /*// BLACK DOWN-POINTING TRIANGLE*/
+}
+
+/*md-checkbox {
+    margin: 8px;
+    cursor: pointer;
+    padding-left: 18px;
+    padding-right: 0;
+    line-height: 26px;
+    min-width: 18px;
+    min-height: 18px;
+}
+    md-checkbox.md-checked.green .md-icon {
+        background-color: rgba(0, 255, 0, 0.87);
+    }*/
+
+.containerCheckbox {
+    /*display: block;*/
+    position: relative;
+    /*padding-left: 35px;*/
+    /*margin-bottom: 12px;*/
+    cursor: pointer;
+    /*font-size: 22px;*/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+    /* Hide the browser's default checkbox */
+    .containerCheckbox input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.containerCheckbox:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.containerCheckbox input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/*/* Show the checkmark when checked */
+.containerCheckbox input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.containerCheckbox .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------*/
+.btn-group .btn {
+    border-radius: 0;
+    margin-left: -1px;
+}
+
+.btn-group .btn:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.btn-group .form-horizontal .btn[type="submit"] {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.form-horizontal .form-group {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.form-group .form-control:last-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+    #adv-search {
+        width: 500px;
+        margin: 0 auto;
+    }
+
+    .dropdown.dropdown-lg {
+        position: static !important;
+    }
+
+        .dropdown.dropdown-lg .dropdown-menu {
+            min-width: 500px;
+        }
+}
+
+.btn.btn-default {
+    width: 18%;
+}
+
+.modal-lg {
+    /*width: 1600px;*/
+    width: 100%;
+    /*max-width: 2000px;*/
+    /*//  height: 1220px;*/
+}
+
+.center-block {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input-group .icon-addon .form-control {
+    border-radius: 0;
+}
+
+.icon-addon {
+    position: relative;
+    color: #555;
+    display: block;
+}
+
+    .icon-addon:after,
+    .icon-addon:before {
+        display: table;
+        content: " ";
+    }
+
+    .icon-addon:after {
+        clear: both;
+    }
+
+    .icon-addon.addon-md .glyphicon,
+    .icon-addon .glyphicon,
+    .icon-addon.addon-md .fa,
+    .icon-addon .fa {
+        position: absolute;
+        z-index: 2;
+        left: 10px;
+        font-size: 14px;
+        width: 20px;
+        margin-left: -2.5px;
+        text-align: center;
+        padding: 10px 0;
+        top: 1px
+    }
+
+    .icon-addon.addon-lg .form-control {
+        line-height: 1.33;
+        height: 46px;
+        font-size: 18px;
+        padding: 10px 16px 10px 40px;
+    }
+
+    .icon-addon.addon-sm .form-control {
+        height: 30px;
+        padding: 5px 10px 5px 28px;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .icon-addon.addon-lg .fa,
+    .icon-addon.addon-lg .glyphicon {
+        font-size: 18px;
+        margin-left: 0;
+        left: 11px;
+        top: 4px;
+    }
+
+    .icon-addon.addon-md .form-control,
+    .icon-addon .form-control {
+        padding-left: 30px;
+        float: left;
+        font-weight: normal;
+    }
+
+    .icon-addon.addon-sm .fa,
+    .icon-addon.addon-sm .glyphicon {
+        margin-left: 0;
+        font-size: 12px;
+        left: 5px;
+        top: -1px
+    }
+
+    .icon-addon .form-control:focus + .glyphicon,
+    .icon-addon:hover .glyphicon,
+    .icon-addon .form-control:focus + .fa,
+    .icon-addon:hover .fa {
+        color: #2580db;
+    }
+
+
+
+
+.sortorder:after {
+    content: '\25b2';
+    /*// BLACK UP-POINTING TRIANGLE*/
+}
+
+.sortorder.reverse:after {
+    content: '\25bc';
+    /*// BLACK DOWN-POINTING TRIANGLE*/
+}
+
+/*md-checkbox {
+    margin: 8px;
+    cursor: pointer;
+    padding-left: 18px;
+    padding-right: 0;
+    line-height: 26px;
+    min-width: 18px;
+    min-height: 18px;
+}
+    md-checkbox.md-checked.green .md-icon {
+        background-color: rgba(0, 255, 0, 0.87);
+    }*/
+
+.containerCheckbox {
+    /*display: block;*/
+    position: relative;
+    /*padding-left: 35px;*/
+    /*margin-bottom: 12px;*/
+    cursor: pointer;
+    /*font-size: 22px;*/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+    /* Hide the browser's default checkbox */
+    .containerCheckbox input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.containerCheckbox:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.containerCheckbox input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/*/* Show the checkmark when checked */
+.containerCheckbox input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.containerCheckbox .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}

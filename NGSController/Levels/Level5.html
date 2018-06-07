@@ -1,0 +1,95 @@
+﻿<div>
+    <a ng-show="showAgain" ng-click="showAgainF()">Re-display the previous form</a><!--הצג שוב את הטופס הקודם-->
+    <div ng-hide="table" id="myTable">
+        <div class="tab-content">
+            <div class="tab-pane fade in active" id="file1">
+                <section class="section pic-table" id="pic-table">
+                    <br />
+                    <div class="col-lg-2">
+                        <form>
+                            <div class="form-group" ng-show="search">
+                                <div class="icon-addon addon-lg">
+                                    <input type="text" class="form-control" maxlength="100" placeholder="Search .." id="email" ng-model="SearchQuery">
+                                    <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="search"></label>
+                                </div>
+                            </div>
+                        </form>
+                    </div><br />
+                    <!--<hr />-->
+                    <div>
+                        <div class="col-lg-12">
+                            <!--mySave('SaveLevel2','2')-->
+                            <button type="button" ng-disabled="readOnly == true" ng-click="printDivModal('2ModalIfSave')" class="btn btn-default dropdown-toggle glly" style="width:4%;" title="save"><i class="glyphicon glyphicon-floppy-save"></i> </button>
+                            <button type="button" ng-click="search=!search" class="btn btn-default dropdown-toggle glly" style="width:4%;" title="search"><i class="glyphicon glyphicon-search"></i>  </button>
+
+                            <!--<button type="button" class="close" ng-click="myClose()">&times;</button>
+                            <br />-->
+                        </div><br /><br /><br />
+                        <div class="container-fluid">
+                            <div class="panel panel-default">
+                                <div class="panel-body" ng-cloak>
+                                    <table cellspacing="0" cellpadding="0" class="scrollTable table table-condensed table-hover">
+                                        <thead class="fixedHeader" position=fixed>
+                                            <tr>
+                                                <!--<th>Chrom </th>-->
+                                                <th>DyDis</th>
+                                                <th>DyMut</th>
+                                                <th>MutID</th>
+                                                <th>MutWt</th>
+                                                <th>Pos</th>
+                                                <th>Id</th>
+                                                <th>Ref</th>
+                                                <th>Alt</th>
+                                                <!--<th ng-repeat-start="item in items5  track by $index" ng-if="item.ListPerson[$index]!=null">
+        Genotype {{item.ListPerson[$index].Name}}
+    </th>
+    <th><a ng-click="sort('SMN1_8_SNP')" ng-repeat="i in items1.ListPerson"> {{i.Name}} allele</a></th>track by
+    <th ng-if="item.ListPerson[$index]!=null">{{item.ListPerson[$index].Name}} allele</th>
+    <th ng-repeat-end ng-if="item.ListPerson[$index]!=null">{{item.ListPerson[$index].Name}} total </th>-->
+
+                                                <th ng-repeat-start="item in items5[0].ListPerson track by $index" ng-if="item!=null">
+                                                    Genotype {{item.Name}}
+                                                </th>
+                                                <th ng-if="item!=null">{{item.Name}} allele</th>
+                                                <th ng-repeat-end ng-if="item!=null">{{item.Name}} total </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tableForLevel3" class="scrollContent" position=fixed>
+
+                                            <tr ng-repeat="item in items5 | filter:SearchQuery ">
+                                                <th class="scrollTd">{{$index}}</th>
+                                                <th class="scrollTd" ng-class="getCSSClass(item.ColorDyName)">{{item.DyDis}}</th>
+                                                <th class="scrollTd" ng-class="getCSSClass(item.ColorDyName)">{{item.DyMut}}</th>
+                                                <th class="scrollTd" ng-class="getCSSClass(item.ColorDyName)">{{item.MutID}}</th>
+                                                <th class="scrollTd" ng-class="getCSSClass(item.ColorDyName)">{{item.MutWt}}</th>
+                                                <th class="scrollTd" >{{item.Pos}}</th>
+                                                <th class="scrollTd" >{{item.Id}}</th>
+                                                <th class="scrollTd" >{{item.Ref}}</th>
+                                                <th class="scrollTd" >{{item.Alt}}</th>
+                                                <td class="scrollTd" ng-class="getCSSClass(i.Color.Genotype)" ng-repeat-start="i in item.ListPerson ">{{i.Genotype}} </td>
+                                                <td class="scrollTd" ng-class="getCSSClass(i.Color.AlleleCoverage)">{{i.AlleleCoverage}}</td>
+                                                <td class="scrollTd" ng-class="getCSSClass(i.Color.TotalCoverage)" ng-repeat-end> {{i.TotalCoverage}}   </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+ <!--ng-hide="dooplicate"
+ ng-hide="dooplicate"
+ ng-hide="dooplicate"
+ ng-hide="dooplicate"
+ ng-hide="dooplicate"
+ ng-hide="dooplicate"
+ ng-hide="dooplicate"
+ ng-hide="dooplicate"
+ ng-hide="dooplicate"
+ ng-hide="dooplicate"
+ ng-hide="dooplicate"
+ ng-hide="dooplicate"-->

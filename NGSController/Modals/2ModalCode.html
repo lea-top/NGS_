@@ -1,0 +1,16 @@
+﻿
+<form name="myForm">
+    <div class="modal-header ">
+        <button type="button" class="close" ng-click="cancel()">&times;</button>
+        <h4 class="modal-title"><span class="glyphicon glyphicon-barcode"></span>  Barcode scanning</h4>
+    </div>
+    <div class="modal-body ">
+        <p>Scan the barcode of the plate 1</p>
+        <input type="text" maxlength="13" class="form-control" ng-model="csvFileBarcode" placeholder="enter barcode" focus-me="shouldBeOpen" required><br />
+    </div>
+    <div class="modal-footer">
+        <a href="" class="btn btn-link" ng-click="printModal('ModalCencel')" title="ביטול">cancel</a>
+        <button type="submit" ng-click="ifBarcode('2ModalFile')" class="btn btn-default" autofocus="autofocus" title="המשך">Continue</button>
+    </div>
+</form>
+

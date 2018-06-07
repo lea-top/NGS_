@@ -1,0 +1,128 @@
+﻿<div>
+    <a ng-show="showAgain" ng-click="showAgainF()">Re-display the previous form</a><!--הצג שוב את הטופס הקודם-->
+    <div ng-hide="table" id="myTable">
+        <!--<section class="pic-Level">
+            <div id="page-wrapper">
+                <div class="row">
+                    <div class=" col-lg-12">
+                        <h3>   Step 2   </h3>
+                        <h3>   {{items6[0].IdFile}}</h3>
+                    </div>
+                </div>
+            </div>
+        </section>-->
+
+        <div class="tab-content">
+            <!--<div class="tab-pane fade" id="file3" ng-include="'Levels/Level1.html'"></div>-->
+            <div class="tab-pane fade in active" id="file1">
+                <section class="section pic-table" id="pic-table">
+                    <br />
+                    <div class="col-lg-2">
+                        <form>
+                            <div class="form-group" ng-show="search">
+                                <div class="icon-addon addon-lg">
+                                    <input type="text" class="form-control" maxlength="100" placeholder="Search .." id="email" ng-model="SearchQuery">
+                                    <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="search"></label>
+                                </div>
+                            </div>
+                        </form>
+                    </div><br />
+                    <!--<hr />-->
+                    <div>
+                        <div class="col-lg-12">
+                            <!--mySave('SaveLevel2','2')-->
+                            <button type="button" ng-disabled="readOnly == true" ng-click="printDivModal('2ModalIfSave')" class="btn btn-default dropdown-toggle glly" style="width:4%;" title="save"><i class="glyphicon glyphicon-floppy-save"></i> </button>
+                            <button type="button" ng-click="search=!search" class="btn btn-default dropdown-toggle glly" style="width:4%;" title="search"><i class="glyphicon glyphicon-search"></i>  </button>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            <button type="button" ng-click="printDivModal('ModalIfSend')" ng-disabled="readOnly == true" class="btn btn-default dropdown-toggle glly" style="width:4%;" title="Save , Download and Send to office "><i class="glyphicon glyphicon-file"></i>  </button>
+                            <button type="button" ng-click="myUpdateAndSend(1)" class="btn btn-default dropdown-toggle glly" style="width:4%;" title="Download file of final step 4 (after send)"><i class="glyphicon glyphicon-download-alt"></i>CSV</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            <button type="button" ng-click="myUpdateAndSend(2)" class="btn btn-default dropdown-toggle glly" style="width:4%;" title="Download file of final step 4 (after send)"><i class="glyphicon glyphicon-download-alt"></i>XLSX</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            <!--<button type="button" class="close" ng-click="myClose()">&times;</button>
+    <br />-->
+                        </div><br /><br /><br />
+                        <div class="container-fluid">
+                            <div class="panel panel-default">
+
+                                <div class="panel-body" ng-cloak>
+                                    <table cellspacing="0" cellpadding="0" class="scrollTable table table-condensed table-hover">
+                                        <thead class="fixedHeader" position=fixed>
+                                            <tr>
+                                                <th>Chrom </th>
+                                                <th>Start</th>
+                                                <th>End</th>
+                                                <th>Id</th>
+                                                <th>Ref</th>
+                                                <th>Alt</th>
+                                                <th>DyDis</th>
+                                                <th>DyMut</th>
+                                                <th>MutID</th>
+                                                <th>GenotypeChrom</th>
+                                                <th>GenotypePos</th>
+                                                <th>GenotypeId </th>
+                                                <th>GenotypeRef</th>
+                                                <th>GenotypeAlt</th>
+                                                <!--<th ng-repeat-start="item in items6  track by $index" ng-if="item.ListPerson[$index]!=null">
+        Genotype {{item.ListPerson[$index].Name}}
+    </th>
+    <th><a ng-click="sort('SMN1_8_SNP')" ng-repeat="i in items6.ListPerson"> {{i.Name}} allele</a></th>track by
+    <th ng-if="item.ListPerson[$index]!=null">{{item.ListPerson[$index].Name}} allele</th>
+    <th ng-repeat-end ng-if="item.ListPerson[$index]!=null">{{item.ListPerson[$index].Name}} total </th>-->
+
+                                                <th ng-repeat-start="item in items6[0].ListPerson track by $index" ng-if="item!=null">
+                                                    Genotype {{item.Name}}
+                                                </th>
+                                                <th ng-if="item!=null">{{item.Name}} allele</th>
+                                                <th ng-repeat-end ng-if="item!=null">{{item.Name}} total </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tableForLevel3" class="scrollContent" position=fixed>
+                                            <!--<tr sf-virtual-repeat="item in items6"><th>{{$index}}: <td>{{line}}-->
+                                            <tr ng-repeat="item in items6 | filter:SearchQuery ">
+                                                <th class="scrollTd">{{$index}}</th>
+                                                <th class="scrollTd">{{item.Chrom}}</th>
+                                                <th class="scrollTd">{{item.Start}}</th>
+                                                <th class="scrollTd">{{item.End}}</th>
+                                                <th class="scrollTd">{{item.Id}}</th>
+                                                <th class="scrollTd">{{item.Ref}}</th>
+                                                <th class="scrollTd">{{item.Alt}}</th>
+                                                <th class="scrollTd" ng-class="getCSSClass(item.ColorDyName)">{{item.DyDis}}</th>
+                                                <th class="scrollTd" ng-class="getCSSClass(item.ColorDyName)">{{item.DyMut}}</th>
+                                                <th class="scrollTd" ng-class="getCSSClass(item.ColorDyName)">{{item.MutID}}</th>
+                                                <th class="scrollTd" ng-class="{'Yellow-class': item.ColorDyName === 'Yellow'}">{{item.GenotypeChrom}}</th>
+                                                <th class="scrollTd" ng-class="{'Yellow-class': item.ColorDyName === 'Yellow'}">{{item.GenotypePos}}</th>
+                                                <th class="scrollTd" ng-class="{'Yellow-class': item.ColorDyName === 'Yellow'}">{{item.GenotypeId}}</th>
+                                                <th class="scrollTd" ng-class="{'Yellow-class': item.ColorDyName === 'Yellow'}">{{item.GenotypeRef}}</th>
+                                                <th class="scrollTd" ng-class="{'Yellow-class': item.ColorDyName === 'Yellow'}">{{item.GenotypeAlt}}</th>
+                                                <td class="scrollTd" ng-class="getCSSClass(i.Color.Genotype)" ng-repeat-start="i in item.ListPerson ">{{i.Genotype}} </td>
+                                                <td class="scrollTd" ng-class="getCSSClass(i.Color.AlleleCoverage)">{{i.AlleleCoverage}}</td>
+                                                <td class="scrollTd" ng-class="getCSSClass(i.Color.TotalCoverage)" ng-repeat-end> {{i.TotalCoverage}}   </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+<!--ng-hide="dooplicate"
+ng-hide="dooplicate=(item.ColorDyName==='Pink'?hideRowDooplicate($index):false)"
+ng-hide="dooplicate"
+ng-hide="dooplicate"
+ng-hide="dooplicate"
+ng-hide="dooplicate"
+ng-hide="dooplicate"
+ng-hide="dooplicate"
+ng-hide="dooplicate"
+ng-hide="dooplicate"
+ng-hide="dooplicate"
+ng-hide="dooplicate"
+ng-hide="dooplicate"
+ng-hide="dooplicate"
+ng-hide="dooplicate"
+ng-hide="dooplicate"
+ng-hide="dooplicate"
+ng-hide="dooplicate"-->
