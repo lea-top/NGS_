@@ -8,6 +8,7 @@ namespace NGSData
 {
     public class Level0
     {
+        //level0
         public long   Id { get; set; }
         public String IdPlate { get; set; }
         public String NumPlate { get; set; }
